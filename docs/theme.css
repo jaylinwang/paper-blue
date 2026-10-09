@@ -1,4 +1,4 @@
-/* Paper Blue 2.1 — Chinese writing typography inspired by Apple China.
+/* Paper Blue 2.2 — Chinese writing typography inspired by Apple China.
    References: https://www.apple.com.cn/v/homepage/a/styles/main.built.css
                https://www.apple.com.cn/global-cn/styles/sfpro-cn.css
    Local system fonts only. No Apple web fonts are downloaded or redistributed.
@@ -286,4 +286,186 @@ body {
 @media print {
   body { --file-margins: 0; }
   .markdown-rendered { color: #1d1d1f; background: #fff; }
+}
+
+/* Application chrome inspired by the supplied ChatGPT/Codex reference.
+   Keep these tokens separate from document colors and editor geometry. */
+.theme-light {
+  --pb-shell: #e8f0f2;
+  --pb-sidebar: #f7f9fa;
+  --pb-ui-hover: #eef1f2;
+  --pb-ui-selected: #e7edef;
+  --pb-ui-border: #e7ebed;
+  --pb-ui-text: #444b50;
+  --pb-ui-muted: #737c82;
+  --pb-ui-shadow: 0 4px 18px rgb(30 50 60 / 6%);
+}
+.theme-dark {
+  --pb-shell: #202729;
+  --pb-sidebar: #242a2c;
+  --pb-ui-hover: #30383a;
+  --pb-ui-selected: #384245;
+  --pb-ui-border: #363e41;
+  --pb-ui-text: #dde3e5;
+  --pb-ui-muted: #a1adb2;
+  --pb-ui-shadow: 0 4px 18px rgb(0 0 0 / 18%);
+}
+body {
+  --titlebar-background: var(--pb-shell);
+  --titlebar-background-focused: var(--pb-shell);
+  --titlebar-text-color: var(--pb-ui-muted);
+  --titlebar-text-color-focused: var(--pb-ui-text);
+  --ribbon-background: var(--pb-shell);
+  --ribbon-background-collapsed: var(--pb-shell);
+  --tab-container-background: var(--pb-shell);
+  --sidebar-tab-container-background: var(--pb-shell);
+  --tab-text-color: var(--pb-ui-muted);
+  --tab-text-color-focused-active-current: var(--pb-ui-text);
+  --tab-divider-color: transparent;
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
+  --tab-radius: 9px;
+  --tab-radius-active: 9px;
+  --tab-background-active: var(--background-primary);
+  --tab-inner-background-hover: var(--pb-ui-hover);
+  --divider-color: var(--pb-ui-border);
+  --nav-item-color: var(--pb-ui-text);
+  --nav-item-color-hover: var(--pb-ui-text);
+  --nav-item-color-active: var(--pb-ui-text);
+  --nav-item-background-hover: var(--pb-ui-hover);
+  --nav-item-background-active: var(--pb-ui-selected);
+  --nav-item-background-selected: var(--pb-ui-selected);
+  --nav-item-radius: 9px;
+  --nav-item-padding: 7px 10px 7px 24px;
+  --nav-item-parent-padding: 7px 10px 7px 24px;
+  --nav-item-margin-bottom: 2px;
+  --nav-item-weight-active: 500;
+  --status-bar-background: var(--background-primary);
+  --status-bar-border-color: var(--pb-ui-border);
+  --status-bar-text-color: var(--pb-ui-muted);
+  --status-bar-radius: 10px 0 0 0;
+  --input-radius: 10px;
+  --search-input-radius: 12px;
+  --button-radius: 10px;
+  --modal-radius: 16px;
+  --modal-border-color: var(--pb-ui-border);
+  --modal-sidebar-background: var(--pb-sidebar);
+  --modal-shadow: var(--pb-ui-shadow);
+  --prompt-border-color: var(--pb-ui-border);
+}
+/* Desktop-only chrome: preserve mobile navigation and native resize handles. */
+body:not(.is-mobile) .workspace {
+  background: var(--pb-shell);
+}
+body:not(.is-mobile) .workspace-split:is(.mod-primary-split, .mod-secondary-split) .workspace-leaf-content:not([data-type="markdown"]):not([data-type="canvas"]) {
+  background: var(--pb-sidebar);
+}
+body:not(.is-mobile) .workspace-split:is(.mod-primary-split, .mod-secondary-split) .workspace-sidedock-vault-profile {
+  background: var(--pb-sidebar);
+  border-top: 1px solid var(--pb-ui-border);
+}
+body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-stacked) > .workspace-tab-container {
+  border-radius: 12px 12px 0 0;
+}
+body:not(.is-mobile) .workspace-ribbon .clickable-icon {
+  border-radius: 10px;
+  color: var(--pb-ui-muted);
+}
+body:not(.is-mobile) .workspace-ribbon .clickable-icon:hover {
+  background: var(--pb-ui-selected);
+  color: var(--pb-ui-text);
+}
+.workspace-split:is(.mod-primary-split, .mod-secondary-split) .nav-header {
+  padding: 10px 8px;
+}
+.workspace-split:is(.mod-primary-split, .mod-secondary-split) .nav-buttons-container {
+  gap: 5px;
+}
+.workspace-split:is(.mod-primary-split, .mod-secondary-split) .nav-files-container {
+  padding-inline: 8px;
+}
+.workspace-split:is(.mod-primary-split, .mod-secondary-split) .search-input-container input {
+  background: var(--background-primary);
+  border-color: var(--pb-ui-border);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 3%);
+}
+.workspace .view-header {
+  border-bottom: 1px solid var(--pb-ui-border);
+}
+.workspace .view-header-title-container {
+  color: var(--pb-ui-muted);
+}
+.workspace :is(.view-actions, .nav-buttons-container) .clickable-icon {
+  border-radius: 8px;
+}
+.workspace :is(.view-actions, .nav-buttons-container) .clickable-icon:hover {
+  background: var(--pb-ui-hover);
+}
+/* Preserve keyboard navigation feedback even with softer pointer hover colors. */
+.workspace :is(.clickable-icon, .nav-file-title, .nav-folder-title):focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: -2px;
+}
+
+/* Rounded panel silhouettes, matching the desktop reference. Native sidebar
+   classes are primary/secondary in Obsidian 1.14. Clip only existing content
+   containers; split resize handles live outside these containers. */
+body:not(.is-mobile) {
+  --pb-panel-radius: 14px;
+  --ribbon-width: 52px;
+  --ribbon-padding: 8px 6px 12px;
+}
+body:not(.is-mobile) .workspace-split.mod-primary-split {
+  background: var(--pb-shell);
+}
+body:not(.is-mobile) .workspace-split.mod-primary-split > .workspace-tabs.mod-top > .workspace-tab-container {
+  border-top-left-radius: var(--pb-panel-radius);
+}
+body:not(.is-mobile) .workspace-split.mod-primary-split .workspace-sidedock-vault-profile {
+  border-bottom-left-radius: var(--pb-panel-radius);
+  overflow: hidden;
+}
+body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-stacked) > .workspace-tab-container {
+  border-radius: var(--pb-panel-radius) var(--pb-panel-radius) 0 0;
+}
+body:not(.is-mobile) .workspace-ribbon .side-dock-ribbon-action {
+  --icon-size: 20px;
+  --icon-stroke: 1.75px;
+  width: 38px;
+  height: 38px;
+  padding: 9px;
+  margin-inline: auto;
+  border-radius: 11px;
+}
+body:not(.is-mobile) :is(.workspace-tab-header-container, .view-header, .nav-header) .clickable-icon {
+  --icon-size: 18px;
+  --icon-stroke: 1.75px;
+  border-radius: 9px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-stacked) > .workspace-tab-container > .workspace-leaf {
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+/* Detached rounded tabs: remove native reverse curves on active AND hovered
+   tabs. Space the containing strip, not each tab inside a clipped strip. */
+body:not(.is-mobile) .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+  margin-block: 5px;
+  padding-block: 0;
+  gap: 4px;
+}
+body:not(.is-mobile) .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  margin-block: 0;
+  padding: 1px 3px;
+  border-radius: 9px;
+  box-shadow: none;
+}
+body:not(.is-mobile) .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header::before,
+body:not(.is-mobile) .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header::after {
+  display: none;
+}
+body:not(.is-mobile) .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+  background: var(--background-primary);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
 }

@@ -20,6 +20,12 @@ A Chinese-first Obsidian theme for comfortable writing, mixed Chinese–English 
 
 适合以中文为主的日记、知识笔记、读书记录，以及包含英文术语和代码的技术文档。实际字体与排版表现会随操作系统、字体安装情况及 Obsidian 设置变化。
 
+## 2.2：更轻的应用界面
+
+参考 ChatGPT / Codex 的界面层次，调整 Obsidian 外层工作区：淡灰蓝顶部栏和工具栏、浅灰侧栏、圆角文件选中项、白色内容面板，以及轻量分隔线、搜索框与弹窗。深色模式提供对应配色。
+
+外层配色使用独立变量；正文的中文字体、行距、列表与 Callout 样式保持原有设计。保留原生标签页、分栏拖拽与键盘焦点提示。桌面布局调整不套用于移动端。在线网页主要展示正文，应用外层效果请在 Obsidian 中查看。
+
 ## 目录
 
 - `theme.css`、`manifest.json`：主题的唯一维护源。
