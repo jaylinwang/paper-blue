@@ -8,6 +8,18 @@ A Chinese-first Obsidian theme for comfortable writing, mixed Chinese–English 
 
 [在线体验](https://jaylinwang.github.io/paper-blue/) · [下载主题与示例库](https://jaylinwang.github.io/paper-blue/paper-blue-demo.zip)
 
+## 实际效果
+
+以下截图来自 macOS 上的 Obsidian 1.14.4，展示 Paper Blue 的浅色界面与仓库中的中文测试样稿。点击图片可查看高清原图。
+
+**完整工作区与中文长文** · 淡灰蓝顶部栏、浅灰侧栏与白色正文面板，配合舒展的栏宽、行距和段落留白。下图为实时预览。
+
+[![Paper Blue 浅色完整工作区：文件侧栏、标签页与中文长文实时预览](assets/screenshots/obsidian-overview.jpg)](assets/screenshots/obsidian-overview.jpg)
+
+**引用与 Callout** · 阅读视图中的嵌套引用、彩色提示框与任务复选框，通过细线、柔和背景和轻边框区分内容层级。
+
+[![Paper Blue 阅读视图：嵌套引用及说明、摘要、任务、提示等 Callout 样式](assets/screenshots/obsidian-callouts.jpg)](assets/screenshots/obsidian-callouts.jpg)
+
 ## 为中文体验做了哪些优化
 
 - **中文字体优先**：正文与界面默认使用 PingFang SC，缺失时回退到系统字体、微软雅黑等；代码保留等宽字体。
