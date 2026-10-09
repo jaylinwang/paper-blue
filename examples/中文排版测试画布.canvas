@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"b9a178a4eb2ac322","type":"group","x":-40,"y":-40,"width":1000,"height":460,"color":"5","label":"观察与重读"},
+		{"id":"088ef0438091edd6","type":"text","text":"# 从一个片段开始\n\n记录具体的事实，也保留尚未回答的问题。\n\n- 观察\n- 书写\n- 重读\n\n**检查：** 字号、边距与列表。","x":0,"y":0,"width":360,"height":340},
+		{"id":"706424642f26571a","type":"file","file":"examples/排版测试关联笔记.md","x":480,"y":0,"width":420,"height":340},
+		{"id":"37fc97a6f06c16fa","type":"file","file":"examples/附件/排版参照卡.png","x":0,"y":500,"width":600,"height":338}
+	],
+	"edges":[
+		{"id":"ff077a6b6642d3e0","fromNode":"088ef0438091edd6","fromSide":"right","toNode":"706424642f26571a","toSide":"left","label":"整理成笔记"}
+	]
+}

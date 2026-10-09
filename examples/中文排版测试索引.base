@@ -1,0 +1,24 @@
+filters:
+  and:
+    - file.inFolder("examples")
+    - file.ext == "md"
+properties:
+  status:
+    displayName: 检查状态
+  sample_score:
+    displayName: 示例评分
+  sample_checked:
+    displayName: 示例已检查
+views:
+  - type: table
+    name: 全部测试笔记
+    order:
+      - file.name
+      - status
+      - sample_score
+      - sample_checked
+  - type: cards
+    name: 卡片视图
+    order:
+      - file.name
+      - status
