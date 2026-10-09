@@ -1,8 +1,24 @@
 # Paper Blue
 
-为中文写作与长文阅读设计的 Obsidian 主题。默认使用 PingFang SC，支持浅色与深色，无需插件或远程字体。
+**一个专注优化中文体验的 Obsidian 主题。**
+
+Paper Blue 围绕中文写作、中英文混排和长文阅读调整字体、行距、栏宽与内容层级，让日记、读书笔记和技术文档更容易书写与重读。默认使用 PingFang SC（苹方），支持浅色与深色，无需插件或远程字体，采用 **MIT 开源协议**。
+
+A Chinese-first Obsidian theme for comfortable writing, mixed Chinese–English typography, and long-form reading. Free and open source under the MIT License.
 
 [在线体验](https://jaylinwang.github.io/paper-blue/) · [下载主题与示例库](https://jaylinwang.github.io/paper-blue/paper-blue-demo.zip)
+
+## 为中文体验做了哪些优化
+
+- **中文字体优先**：正文与界面默认使用 PingFang SC，缺失时回退到系统字体、微软雅黑等；代码保留等宽字体。
+- **适合长文的阅读节奏**：默认 17px 正文、1.8 倍行高与 720px 栏宽，配合段落留白，方便连续阅读和寻找下一行。
+- **自然的中英文混排**：保持零字距与左对齐，使用严格的中文标点换行规则，让汉字、英文、数字和行内代码共同出现时更协调。主题不修改原文，也不自动插入中英文空格。
+- **清晰的标题与强调**：通过字号、600 字重和间距区分内容层级，蓝色链接与柔和高亮便于识别。
+- **更舒展的列表**：调整符号与正文之间的距离、列表缩进及嵌套间距，兼顾长条目折行后的可读性。
+- **克制的引用与 Callout**：细引用线、浅色背景和轻边框；针对 Obsidian 1.14 修复 Callout 颜色，并减少实时预览中的重复外框与额外间距。
+- **兼顾阅读与写作**：适配阅读视图与实时预览，源码模式保持紧凑；字号仍可通过 Obsidian 原生设置调整。
+
+适合以中文为主的日记、知识笔记、读书记录，以及包含英文术语和代码的技术文档。实际字体与排版表现会随操作系统、字体安装情况及 Obsidian 设置变化。
 
 ## 目录
 
@@ -39,6 +55,12 @@ python3 -m http.server 8080 --directory docs
 
 中文排版参考 [Apple 中国官网](https://www.apple.com.cn/)，针对笔记和长文重新设计。本项目与 Apple、Obsidian 无隶属关系，不下载或分发其字体与网站素材。
 
-## 反馈与许可
+## 反馈
 
-欢迎通过 [Issues](https://github.com/jaylinwang/paper-blue/issues) 提交最小复现样例，请勿包含私人笔记内容。采用 [MIT License](LICENSE)。
+欢迎通过 [Issues](https://github.com/jaylinwang/paper-blue/issues) 反馈中文排版问题。请提供 Obsidian 版本、操作系统、阅读或编辑模式，以及不含私人内容的最小 Markdown 样例。
+
+## 开源协议
+
+Paper Blue 使用 [MIT License](LICENSE)。主题源码、展示网页和本仓库原创示例按该协议开放；完整许可条款见根目录 `LICENSE` 文件。
+
+Copyright (c) 2026 jaylinwang.
